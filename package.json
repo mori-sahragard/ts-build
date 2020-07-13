@@ -8,12 +8,19 @@
     "prestart": "npm run build && func extensions install",
     "start:host": "func start",
     "start": "npm-run-all --parallel start:host watch",
-    "test": "echo \"No tests yet...\""
+    "test": "mocha -r ts-node/register test/**/*.tests.ts"
   },
   "description": "",
   "devDependencies": {
     "@azure/functions": "^1.0.1-beta1",
     "npm-run-all": "^4.1.5",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "@types/chai": "^4.2.7",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.5.4"
   }
 }
